@@ -24,18 +24,22 @@ const data =  [
 // sort the data like all false are at last 
 
 function sortBy(data,option) {
-  switch(option){
-    case 'bool':
-   // sort based on boolean value
-   return data.sort((a, b) => b.available - a.available);
-   case 'str':
-   // sort based on the string compare
-   return data.sort((a,b) => a.str === 'true' ? -1 : b.str === 'true'? 1 : 0)
-   case 'random':
-  // suffel data randomly 
-  return data.sort(() => Math.random() - .3)
-  default:
-   return data
+  switch(option){ 
+        case 'bool':
+              // sort based on boolean value
+              return data.sort((a, b) => b.available - a.available);
+              break;
+       case 'str':
+              // sort based on the string compare
+              return data.sort((a,b) => a.str === 'true' ? -1 : b.str === 'true'? 1 : 0)
+              break;
+       case 'random':
+              // shuffle data randomly
+              return data.sort(() => Math.random() - .3) // .3 is the value the differs/ randomizes the data
+              break;
+        // if not option is available then default data is returned.
+        default:
+              return data
   }
 }
 
