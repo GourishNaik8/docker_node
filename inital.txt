@@ -1,1 +1,1 @@
-This is repo is created to create a git-docker container for js
+This repo is created make note of js snippet codes
