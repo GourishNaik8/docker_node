@@ -1,1 +1,48 @@
 This repo is created make note of js snippet codes
+
+
+    in the sortBy() 
+    to get the 1st available at 1st position and the 2nd available in 2nd position ... so on with  
+    it s easy with boolean values but we cant have boolean values in data like poduct details and chats available ...
+    we may have string values, in the sortBy() we have data havinng an attribute str it have "string" value, 
+    if sort as above approch we cant get the data as we desired, 
+    problem is consider the attribute as 
+
+        data = {
+            p0{
+                "stk-status":'out-of-stock'
+            }
+            p1{
+                "stk-status":'in-stock'
+            }
+            p2{
+                "stk-status":'out-of-stock'
+            }
+            // some more
+        }
+
+    There The Sort happes like -> 
+
+    The sort() method expects a callback function that returns a negative number if the first element should be before the second element,
+    a positive number if the second element should be before the first element, and 0 if the two elements are equal.
+    Your second sort function returns the string -1 if a.stk-status is equal to 'in-stock' and the string 1 if b.stk-status is equal to 'in-stock'.
+    This is not a valid return value for the sort() method, and is likely causing the unexpected results you are seeing.
+    To fix this, you need to return a numeric value from your sort function.
+    
+    data.sort((a, b) => (a.stk-status === 'in-stock' && b.stk-status !== 'in-stock') ? -1 : (a.stk-status !== 'in-stock' && b.stk-status === 'in-stock') ? 1 : 0); 
+
+
+    reffer the data there is another data attribute str it valu are boolean in string format "true" or "false"
+    For that kind of sorting the data it wont give the desired results as well as above,
+
+    The second sort does not work as expected because it is not comparing the strings correctly.
+    The === operator checks for strict equality, which means that both the value and the type of the operands must be the same.
+    In this case, the strings 'true' and true have the same value but different types (string and boolean respectively).
+    This means that the === operator will always return false, regardless of whether the strings are actually equal in value.
+
+    If you want to sort the array by the str property, you need to use a different comparison function.
+    The following code shows how to use the localeCompare() method to sort the array by the str property:
+
+    data.sort((a, b) => a.str.localeCompare(b.str));
+
+    * localeCompare() *
