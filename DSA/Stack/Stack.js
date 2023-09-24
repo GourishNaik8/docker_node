@@ -21,7 +21,7 @@ Stack_es5.prototype.isEmpty = function() {
 
 // function stack in es6 format
 
-export class Stack_es6 {
+export default class Stack_es6 {
   constructor() {
     this.items = [];
   }

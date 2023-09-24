@@ -1,4 +1,5 @@
-import { Stack_es5, Stack_es6 } from './Stack'; // Adjust the import paths
-// import { Stack_es5, Stack_es6 } from './Stack_es6'; // Adjust the import paths
+import Stack_es5 from './Stack'
+import Stack_es6 from './Stack';
 
-export { Stack_es5, Stack_es6 };
+export const stack1 = Stack_es5;
+export const stack2 = Stack_es6;
