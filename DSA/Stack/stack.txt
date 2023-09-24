@@ -1,0 +1,26 @@
+Stack is an linear data structure : first in last out 
+
+functions can be performed on Stack are:
+
+    PUSH: push is an opperation that pushes a value to the top of the stack,
+        if the stack is full then it will throw an alert.
+    POP: pop is an opperation that pop a value from the top of the stack,
+        if the stack is underflow/enmty then it will throw an alert.
+
+    index: index is an opperation accepts an values ( that can be value that is there in the stack or the index value),
+        if its value in the stack then it should return the index of the value where it lies in the stack.
+        if its a index value then it should return the value that is present in the index of stack.
+    
+    // NOTE: there is no default/builtin stack so use array then this below are possible in JS.
+    
+    The above are basic functions/opperation that maxmimum knows about,
+    but  if we implement the stack in JS there are two more shift and unshift 
+        SHIFT: shift is similar to the pop but it follows from the bottom.
+        UNSHIFT: unshift is similar to the push it follows from the bottom.
+        this opperations are destructive -> they modify the original array.
+        the above shift and unshift methods take more time they increase the timecomplexity.
+
+    this are below are can be implemented by user.
+
+    PEAK: peak is an opperation that returns the top value of the stack.
+    IS-EMPTY: is-empty opperation  return boolean value the is the stack is empty return true ? false.
