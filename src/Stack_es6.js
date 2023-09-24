@@ -1,4 +1,4 @@
-import { stack2 } from "../DSA/Stack";
+import { Stack2 } from '../../DSA/Stack/index.js';
 //create an instance of Stack object and performe method actions for es-6 class
 const myStack_es6 = new stack2();
 
