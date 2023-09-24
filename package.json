@@ -1,0 +1,15 @@
+{
+    "name": "js_snippet",
+    "version": "1.0.0",
+    "description": "A repository for DSA and JS Snippets",
+    "type": "module",
+    "exports": {
+        ".": "index.js"
+      },
+    "scripts": {
+        "start": "node index.js"
+    },
+    "dependencies": {
+        "lodash": "^4.17.21"
+      }
+}
